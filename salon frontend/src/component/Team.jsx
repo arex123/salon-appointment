@@ -75,7 +75,7 @@ const Team = () => {
     },
   ]);
   return (
-    <div className="grid grid-cols-4 content-start gap-14">
+    <div className="grid grid-cols-4 gap-14">
       {teamDetails.map((team) => (
         <TeamInfo prop={team} />
       ))}

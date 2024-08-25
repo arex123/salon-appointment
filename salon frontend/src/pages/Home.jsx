@@ -4,6 +4,8 @@ import { Tabs } from "antd";
 
 import Services from "../component/Services";
 import Team from "../component/Team";
+import Review from "../component/Review";
+import { CiSquarePlus } from "react-icons/ci";
 
 const onChange = (key) => {
   console.log(key);
@@ -62,24 +64,73 @@ const Home = () => {
           <img className="cursor-pointer rounded-md" src={images[2]} />
         </div>
 
-        <div className="w-[65%]">
-          <div>
-            <h2 className="text-4xl font-semibold mt-14 mb-2">Services</h2>
-            <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <div className="flex justify-between">
+          <div className="w-[65%]">
+            <div>
+              <h2 className="text-4xl font-semibold mt-14 mb-2">Services</h2>
+              <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
 
-            <div className="my-6">
-              {" "}
-              <span className="border font-semibold cursor-pointer border-gray-200 p-3 text-sm rounded-md hover:border-gray-300 hover:bg-gray-300">
-                See All
-              </span>
+              <div className="my-6">
+                {" "}
+                <span className="border font-semibold cursor-pointer border-gray-200 p-3 text-sm rounded-md hover:border-gray-300 hover:bg-gray-300">
+                  See All
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center space-x-4 mt-16 mb-7">
+                <h2 className="text-4xl font-semibold">Team</h2>
+                <CiSquarePlus className="text-3xl"/>
+              </div>
+
+              <Team />
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-semibold mt-16 mb-7">Reviews</h2>
+              <div className="flex flex-col">
+                <div className="flex space-x-2 text-3xl mb-2">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="font-semibold">5.0 (849)</span>
+              </div>
+              <Review />
+              <div className="my-10">
+                {" "}
+                <span className="border font-semibold cursor-pointer border-gray-200 p-3 text-sm rounded-md hover:border-gray-300 hover:bg-gray-300">
+                  See All
+                </span>
+              </div>
             </div>
           </div>
 
-          <div>
-          <h2 className="text-4xl font-semibold mt-16 mb-7">Team</h2>
-
-          <Team/>
-
+          <div className="mt-10 w-[33%] flex justify-center">
+            <div className="w-full flex flex-col items-center h-[9%] border border-gray-300 rounded-md">
+              <h2 className="text-5xl font-semibold mt-10 mb-2">
+                The Stars Barber
+              </h2>
+              <div className="flex my-2 space-x-3 text-xl items-center">
+                <span className="font-semibold">5.0</span>
+                <span className="flex items-center space-x-1">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar /> <span>(849)</span>
+                </span>
+              </div>
+              <div>
+                <button className="text-white my-2 rounded-md w-96 p-2 text-[22px] bg-black hover:opacity-75">
+                  Book now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

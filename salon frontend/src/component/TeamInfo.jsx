@@ -13,8 +13,8 @@ const TeamInfo = ({ prop }) => {
   let currColor = bgColor[Math.floor(Math.random() * bgColor.length)];
 
   return (
-    <div>
-      <div className="flex flex-col items-center">
+    // <div>
+      <span className="flex w-[61%] flex-col items-center">
         <div className="h-28 w-28 flex bg-red-300 rounded-full flex-col justify-center items-center overflow-hidden">
           {prop.pic == null ? (
             <div
@@ -34,8 +34,8 @@ const TeamInfo = ({ prop }) => {
         </div>
         <p className="mt-[-10px]">{prop.name}</p>
         <p className="text-gray-500 font-light">{prop.skill}</p>
-      </div>
-    </div>
+      </span>
+    // </div>
   );
 };
 
