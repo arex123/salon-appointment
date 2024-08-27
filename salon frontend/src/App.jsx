@@ -1,8 +1,8 @@
 import './App.css'
-import ForgetForm from './component/ForgetForm'
-import Login from './component/Login'
-import ResetForm from './component/ResetForm'
-import Signup from './component/Signup'
+import ForgetForm from './pages/ForgetForm.jsx'
+import Login from './pages/Login.jsx'
+import ResetForm from './pages/ResetForm.jsx'
+import Signup from './pages/Signup.jsx'
 import {
   createBrowserRouter,
   RouterProvider,

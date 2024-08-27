@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { Tabs } from "antd";
 
@@ -6,6 +6,8 @@ import Services from "../component/Services";
 import Team from "../component/Team";
 import Review from "../component/Review";
 import { CiSquarePlus } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
+
 
 const onChange = (key) => {
   console.log(key);
@@ -29,6 +31,9 @@ const items = [
 ];
 
 const Home = () => {
+
+  const navigate = useNavigate()
+
   const images = [
     "https://images.fresha.com/locations/location-profile-images/445734/464018/5911eb39-de4c-44b5-b506-eeab6d9147e4.jpg?class=gallery-modal-large&dpr=2&watermark=true",
     "https://images.fresha.com/locations/location-profile-images/445734/464019/da145117-1f8d-4f0f-aa34-c6b9035bab89.jpg?class=gallery-modal-large&dpr=2&watermark=true",
@@ -36,6 +41,14 @@ const Home = () => {
     "https://www.fresha.com/a/the-stars-barber-dubai-540-jumeirah-street-iebwlr0v#modal-gallery",
   ];
 
+  useEffect(()=>{
+    let token = localStorage.getItem("token")
+    if(token){
+
+    }else{
+      navigate('/login')
+    }
+  },[])
   return (
     <div className="flex justify-center">
       <div className="w-[80%]">

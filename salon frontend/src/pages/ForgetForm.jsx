@@ -1,5 +1,5 @@
 import React from 'react'
-import Toast from './Toast'
+import Toast from '../component/Toast'
 
 const ForgetForm = () => {
   return (
